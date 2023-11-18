@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
+
+@layer components {
+  body {
+    @apply bg-slate-900 text-slate-100;
+    font-family: "Inter", sans-serif;
+  }
+  .public-container {
+    @apply bg-brand-purple text-text tracking-tight;
+  }
+
+  .clickable {
+    position: relative;
+  }
+  .clickable:before {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    top: -0.5rem;
+  }
+  .clickable.debug {
+    background: #e8347455;
+  }
+}
